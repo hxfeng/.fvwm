@@ -1,0 +1,37 @@
+MenuStyle * Hilight3DOff, HilightBack #424164, ActiveFore white
+Colorset 0 Transparent,fg white
+MenuStyle * MenuColorset 0
+MenuStyle * Foreground grey90
+MenuStyle * Background #1c5572
+MenuStyle * Font "xft:YaHei Consolas Hybrid:style=bold:size=12:encoding=iso10646-1"
+#MenuStyle * MenuColorset 0, HilightBack, ActiveColorset 1
+MenuStyle * BorderWidth 1, TitleUnderlines1, SeparatorsLong, TrianglesSolid
+MenuStyle * ItemFormat "%.2|%.5i%.5l%.5i%2.3>%2|"
+MenuStyle * AutomaticHotKeys
+MenuStyle * MenuFace VGradient 128 1 #2c80A0 1 #1c5572 
+ColormapFocus FollowsFocus
+
+DestroyMenu MenuFvwmRoot
+AddToMenu MenuFvwmRoot
++ "Terminal" Exec exec gnome-terminal
++ "Home" Exec exec thunar /home/zhou
++ "" Nop
++ "OpenOffice办公套件" Exec exec openoffice
++ "Ark" Exec exec ark
++ "星际译王" Exec exec stardict
++ "网络工具" Popup MenuInternet
++ "Editor工具" Popup MenuEditors
++ "多媒体程序" Popup MenuMultimedia
++ "系统工具" Popup MenuUtilities
++ "&运行..." Module FvwmForm FvwmForm-Run
+#+ "Preferences" Popup MenuFvwmConfig
++ "" Nop
++ "退出窗口管理器" Popup MenuQuit-Verify
+
+DestroyMenu MenuQuit-Verify
+AddToMenu MenuQuit-Verify
++ "Exit FVWM Now... " Quit
++ "Restart FVWM ..." Restart
++ "Power Off" Exec exec /sbin/halt -p
++ "Reset" Exec exec /sbin/reboot
++ "&Lock Screen" Exec exec #xscreensaver-command -lock

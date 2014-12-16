@@ -1,0 +1,13 @@
+# The autohiding functions
+AddToFunc autohide
++ I ThisWindow ($0) Deschedule $[w.id]
++ I ThisWindow ($0) KeepRc ThisWindow (shaded) WindowShade off
++ I TestRc (!Match) All ($0, !shaded) autohide_hide $1 $2
+
+AddToFunc autohide_hide
++ I Schedule $0 $[w.id] WindowShade $2
++ I Schedule $0 $[w.id] Deschedule $[w.id]
+
+# Start FvwmAuto
+AddToFunc StartFunction
++ I Module FvwmAuto FvwmAutohide -menter enter_handler

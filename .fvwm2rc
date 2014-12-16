@@ -1,0 +1,28 @@
+Read f.strokes
+Read f.menu
+Read f.buttonbar
+Read f.taskbar
+Read f.pager
+Read f.iconman
+Read f.style
+Read f.Mouse
+Read f.ButtonStyle
+Read f.autohiding
+
+# 窗口最大化是两边撑满,而上面留出20个(像素?),下面相应的留出25
+EwmhBaseStruts 0 0 20 25 
+
+#使用EdgeScroll命令禁止flipping pages（鼠标不会因为接近屏幕边缘而进入相近的桌面）
+EdgeScroll 0 0 
+
+# 用来设定桌面的大小,这里只设置了一个桌面,但是有8页
+DeskTopSize 8x1
+
+AddToFunc StartFunction
++ I Module FvwmAnimate
++ I Module FvwmPager
++ I Module FvwmButtons -g +0+0
++ I Module FvwmTaskBar 
+
+AddToFunc ExitFunction
++ I Exec exec sync

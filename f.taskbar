@@ -1,0 +1,39 @@
+Style FvwmTaskBar NoTitle, WindowListSkip, CirculateSkip, Sticky, BorderWidth 1, NoHandles, StaysOnBottom 
+Style FvwmTaskBar NeverFocus, Layer 0 
+
+DestroyModuleConfig FvwmTaskBar: * 
+*FvwmTaskBar: Geometry -0-0 #位置
+*FvwmTaskBar: Rows 1 
+*FvwmTaskBar: Font -adobe-helvetica-bold-r-*-*-12-*,-*-simsun-medium-r-*-*-12-*-*-*-*-*-*-*
+*FvwmTaskBar: Font "-adobe-helvetica-bold-r-*-*-12-*,-*-simsun-medium-r-*-*-12-*-*-*-*-*-*-*"
+*FvwmTaskBar: SelFont -adobe-helvetica-bold-r-*-*-12-*,-*-simsun-medium-r-*-*-12-*-*-*-*-*-*-* 
+*FvwmTaskBar: Colorset 0 
+*FvwmTaskBar: AutoStick 
+*FvwmTaskBar: UseSkipList 
+*FvwmTaskBar: PageOnly 
+*FvwmTaskBar: ShowTips 
+*FvwmTaskBar: TipsColorset 0 
+*FvwmTaskBar: StartName Debian #开始按钮显示的名称。（这里是Debian，你可以换成“开始”字样）
+*FvwmTaskBar: StartMenu MenuFvwmRoot mouse -100p -104m 
+#*FvwmTaskBar: Pixmap /home/gkp/.fvwm/image/title-active.png
+*FvwmTaskBar: NoBrightFocus 
+*FvwmTaskBar: 3DFvwm 
+*FvwmTaskBar: MailCheck 0 
+#下面五段是关于颜色的设定。（背景，黑色。字体，白色）
+*FvwmTaskBar: Back #3B3B3B 
+*FvwmTaskBar: Fore white
+*FvwmTaskBar: FocusFore cornsilk
+*FvwmTaskBar: IconBack #3B3B3B
+*FvwmTaskBar: IconFore white 
+*FvwmTaskBar: ClockFormat :%R %m/%d #右下角显示时间，日期
+*FvwmTaskBar: Action Click 3 Menu MenuFvwmWindowOps mouse -1p -100m #点击“开始按钮”，菜单弹出的位置。
+
+
+#在任务条上显示的快捷程序。
+#*FvwmTaskBar: MailCommand Exec exec rxvt -e mutt
+#*FvwmTaskBar: Button NoTitle , Icon home.png, Action (Mouse 1) Exec exec kfmclient openURL $HOME
+*FvwmTaskBar: Button NoTitle , Icon mplayer.png, Action (Mouse 1) Exec exec gmplayer
+*FvwmTaskBar: Button NoTitle , Icon xmms.png, Action (Mouse 1) Exec exec xmms
+#*FvwmTaskBar: Button NoTitle , Icon stardict.png, Action (Mouse 1) Exec exec stardict
+*FvwmTaskBar: Button NoTitle , Icon ark.png, Action (Mouse 1) Exec exec ark
+*FvwmTaskBar: Button NoTitle , Icon gimp.png, Action (Mouse 1) Exec exec gimp

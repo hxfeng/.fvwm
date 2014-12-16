@@ -1,0 +1,23 @@
+#我的设定很简单，其具体的含义请看王哏的指南。
+
+#Mouse 1 R A Nop 
+Mouse 1 R A WindowList
+Mouse 1 1 A Menu MenuFvwmWindowOps Nop 
+Mouse 1 2 A Close 
+Mouse 1 6 A Iconify 
+Mouse 1 4 A Maximize 
+Mouse 3 R A Menu MenuFvwmRoot 
+Mouse 1 T A Move-or-Raise
+Mouse 1 I A Move-or-Iconify
+Mouse 1 W M Move-or-Raise
+
+Key F1 A M Exec exec xterm
+Key F2 A M Exec exec grun
+Key F3 A M Module FvwmConsole -terminal rxvt
+Key F4 A M Pick Close
+Key X A 4 Pick Destroy
+Key L A 4 Exec exec xscreensaver-command --lock
+Key I A 4 All (AcceptsFocus CurrentPage !Iconic !Shaded) Thumbnail
+Key X A CM Exec exec xmag
+Key F4 A CM Quit
+Key R A CM Restart

@@ -1,0 +1,39 @@
+#这是在我桌面右上角的，虚拟桌面切换器。
+# FvwmPager
+#Style FvwmPager HandleWidth 3, BorderWidth 3
+#SetEnv FvwmPager-Width "223"
+SetEnv FvwmPagerDesktops "8" #我设了8个虚拟的桌面
+
+PipeRead "echo SetEnv FvwmPager-Width /"$[28*$FvwmPagerDesktops]/""
+PipeRead "echo *FvwmPager: Geometry $[FvwmPager-Width]x24--1+-1" #“X24”是指它显示的大小是24象素。“-1+-1”是它显示在屏幕上的位置。（在右上角）
+
+FvwmPager: Hilight3DOff, HilightBack #424164, ActiveFore white
+Colorset 0 Transparent,fg white #颜色
+*FvwmPager: MiniIcons
+*FvwmPager: Font none
+#*FvwmPager: Maximize 100 -30p
+#*FvwmPager: AutoHide 1
+*FvwmPager: WindowBorderWidth 1
+*FvwmPager: Window3DBorders
+*FvwmPager: ShowTips
+*FvwmPager: FocusFore cornsilk
+#*FvwmPager: NoSeparators
+*FvwmPager: UseSkipList
+*FvwmPager: Colorset * 41 #前景色
+*FvwmPager: HilightColorset * 42 #背景色
+#*FvwmPager: Foreground grey90
+#*FvwmPager: Background #1c5572
+*FvwmPager: WindowColorsets $[cs-panel-wininactive] $[cs-panel-winactive]
+#*FvwmPager: Face VGradient 128 1 #2c80A0 1 #1c5572
+
+Style FvwmPager NoTitle,WindowListSkip,BorderWidth 1, HandleWidth 1,Sticky,/
+StaysOnTop,CirculateSkip
+#Style FvwmPager Sticky, NeverFocus, WindowListSkip, FixedPosition, /
+FixedSize, StaysOnBottom, Handles, BorderWidth 1, HandleWidth 1, /
+NoTitle, NoIcon, Colorset $[cs-panel-border], /
+BorderColorset $[cs-panel-border], /
+HilightColorset $[cs-panel-border], /
+HilightBorderColorset $[cs-panel-border]
+
+#PipeRead "echo DesktopSize ${FvwmPagerDesktops}x1"
+DesktopSize 8x1
