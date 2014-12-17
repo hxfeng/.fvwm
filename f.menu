@@ -13,8 +13,9 @@ ColormapFocus FollowsFocus
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot
-+ "Terminal" Exec exec gnome-terminal
-+ "Home" Exec exec thunar /home/zhou
++ "Terminal" Exec exec rxvt-unicode -bg black -fg green \
+ -fn "xft:YaHei Consolas Hybrid:pixelsize=14:antialias=true"
++ "Home" Exec exec thunar ~
 + "" Nop
 + "OpenOffice办公套件" Exec exec openoffice
 + "Ark" Exec exec ark

@@ -1,7 +1,6 @@
 #以“style”开头的语句，用来设置所有窗口的样式。
 
-style * Colorset 42, HilightColorset 41 # to use fg and bg #前景色和后景色
-Style * Font "xft:YaHei Consolas Hybrid:pixelsize=14:antialias=true"
+style * Colorset 
 #Style * SmartPlacement, WindowShadeSteps 0, ResizeOutLine
 Style * Button 1, Button 2, Button 4, Button 6, Button 8, GrabFocusOff #标题栏上显示的按钮
 Style * BorderWidth 0, HandleWidth 1

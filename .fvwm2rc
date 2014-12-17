@@ -8,7 +8,7 @@ Read f.style
 Read f.Mouse
 Read f.ButtonStyle
 Read f.autohiding
-
+Read f.function
 # 窗口最大化是两边撑满,而上面留出20个(像素?),下面相应的留出25
 EwmhBaseStruts 0 0 20 25 
 
